@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.muneeb_dev.vpn_app"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.muneeb_dev.vpn_app"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -26,6 +26,12 @@ android {
             )
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -45,4 +51,17 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.com.intuit.sdp)
+    implementation(libs.com.intuit.ssp)
+
+    //TinyDB
+    implementation(libs.androidx.preference.ktx)
+    implementation(libs.gson)
+
+//    implementation(libs.lottie)
+
+    implementation(libs.jakewharton.timber)
+
+
 }

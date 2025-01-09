@@ -2,4 +2,26 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="app_main_bg_color">#10172A</color>
+
+    <color name="unselected_item_color">#62646D</color>
+    <color name="selected_item_color">#25FD09</color>
+
+    <color name="dark_grey">#1D2031</color>
+    <color name="dark_grey2">#292D42</color>
+    <color name="dark_grey3">#909090</color>
+    <color name="main_text_color">#E7E7E7</color>
+
+
+    <color name="green2_color">#14AE5C</color>
+    <color name="blue_color">#06E1FF</color>
+    <color name="blue_color2">#3D83FF</color>
+
+    <color name="text2_color">#7C7F90</color>
+    <color name="rb_unselected_color">#434363</color>
+
+
+
+
 </resources>
