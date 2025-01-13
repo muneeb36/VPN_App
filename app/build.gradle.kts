@@ -64,4 +64,16 @@ dependencies {
     implementation(libs.jakewharton.timber)
 
 
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    // Network libraries
+    implementation(libs.okhttp)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    implementation(libs.lottie)
+
+
+
 }

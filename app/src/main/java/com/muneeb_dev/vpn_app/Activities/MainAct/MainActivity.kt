@@ -1,5 +1,6 @@
 package com.muneeb_dev.vpn_app.Activities.MainAct
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import androidx.activity.enableEdgeToEdge
@@ -9,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.muneeb_dev.vpn_app.Activities.MainAct.PagerAdapter.ViewPagerAdapter
+import com.muneeb_dev.vpn_app.Activities.SpeedTestAct.SpeedTestActivity
 import com.muneeb_dev.vpn_app.AppUtils.updateStatusBarColor
 import com.muneeb_dev.vpn_app.R
 import com.muneeb_dev.vpn_app.databinding.ActivityMainBinding
@@ -79,6 +81,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        binding.includedDrawer.speedTestLL.setOnClickListener {
+            startActivity(Intent(this, SpeedTestActivity::class.java))
+        }
 
 
     }

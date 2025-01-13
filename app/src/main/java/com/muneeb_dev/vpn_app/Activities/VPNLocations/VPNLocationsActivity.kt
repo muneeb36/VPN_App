@@ -93,12 +93,35 @@ class VPNLocationsActivity : AppCompatActivity() {
         return listOf(
             Server_DataModel("Singapore", "127.123.21.12", false),
             Server_DataModel("Netherlands", "127.123.21.12", false),
+            Server_DataModel("US - New York", "127.123.21.12", true),
+            Server_DataModel("Singapore", "127.123.21.12", false),
+            Server_DataModel("Netherlands", "127.123.21.12", false),
+            Server_DataModel("US - New York", "127.123.21.12", true),
+            Server_DataModel("Singapore", "127.123.21.12", false),
+            Server_DataModel("Netherlands", "127.123.21.12", false),
+            Server_DataModel("Singapore", "127.123.21.12", false),
+            Server_DataModel("Netherlands", "127.123.21.12", false),
+            Server_DataModel("US - New York", "127.123.21.12", true),
+            Server_DataModel("Singapore", "127.123.21.12", false),
+            Server_DataModel("Netherlands", "127.123.21.12", false),
             Server_DataModel("US - New York", "127.123.21.12", true)
         )
     }
 
     private fun getPremiumServers(): List<Server_DataModel> {
         return listOf(
+            Server_DataModel("US - New York", "127.123.21.12", true),
+            Server_DataModel("California", "127.123.21.12", true),
+            Server_DataModel("US - New York", "127.123.21.12", true),
+            Server_DataModel("California", "127.123.21.12", true),
+            Server_DataModel("US - New York", "127.123.21.12", true),
+            Server_DataModel("California", "127.123.21.12", true),
+            Server_DataModel("US - New York", "127.123.21.12", true),
+            Server_DataModel("California", "127.123.21.12", true),
+            Server_DataModel("US - New York", "127.123.21.12", true),
+            Server_DataModel("California", "127.123.21.12", true),
+            Server_DataModel("US - New York", "127.123.21.12", true),
+            Server_DataModel("California", "127.123.21.12", true),
             Server_DataModel("US - New York", "127.123.21.12", true),
             Server_DataModel("California", "127.123.21.12", true)
         )

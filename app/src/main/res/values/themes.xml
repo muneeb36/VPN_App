@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.VPN_App" parent="Base.Theme.VPN_App" />
+
+    <style name="MyRadioButton" parent="Theme.VPN_App">
+    <item name="colorControlNormal">@color/rb_unselected_color</item>
+    <item name="colorControlActivated">@color/blue_color2</item>
+    </style>
+
 </resources>

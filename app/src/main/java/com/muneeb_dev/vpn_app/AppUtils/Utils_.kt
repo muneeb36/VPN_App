@@ -1,14 +1,28 @@
 package com.muneeb_dev.vpn_app.AppUtils
 
+import android.animation.Animator
+import android.animation.ValueAnimator
 import android.app.Activity
 import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.ColorFilter
+import android.graphics.Paint
+import android.graphics.PixelFormat
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Build
+import android.view.View
+import android.view.ViewAnimationUtils
+import android.view.ViewGroup
 import android.view.WindowInsetsController
+import android.view.animation.AccelerateDecelerateInterpolator
+import android.view.animation.LinearInterpolator
 import android.widget.Toast
 import androidx.annotation.ColorInt
+import androidx.core.animation.doOnEnd
 import androidx.core.view.WindowCompat
 import com.muneeb_dev.vpn_app.AppUtils.Constants_.ISPREMUM_USER
 import java.text.SimpleDateFormat
@@ -121,6 +135,12 @@ fun shareApp(activity: Activity) {
         Toast.makeText(activity, "No app found to share the link.", Toast.LENGTH_SHORT).show()
     }
 }
+
+
+
+
+
+
 
 
 

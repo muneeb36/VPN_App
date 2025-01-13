@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:contentInsetStartWithNavigation="0dp"
-
+                android:layout_marginEnd="@dimen/_10sdp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -82,9 +82,9 @@
                         android:id="@+id/actionBtnIMGV"
                         android:layout_width="@dimen/_32sdp"
                         android:layout_height="@dimen/_32sdp"
-                        android:layout_marginVertical="@dimen/_5sdp"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:src="@drawable/dimond_with_bg"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/diamond"
+                        android:background="@drawable/dark_grey_rounded_rect_icon_bg"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" />
@@ -138,7 +138,7 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
@@ -149,6 +149,7 @@
 
         <!-- Include your custom layout -->
         <include
+            android:id="@+id/included_drawer"
             layout="@layout/drawer_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

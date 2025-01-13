@@ -1,6 +1,7 @@
 package com.muneeb_dev.vpn_app.Activities.VPNLocations.Adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.muneeb_dev.vpn_app.DataModels.Server_DataModel
@@ -14,12 +15,19 @@ class ServersRvAdapter(private var serverList: List<Server_DataModel>) : Recycle
     }
 
     override fun onBindViewHolder(holder: ServerViewHolder, position: Int) {
-
+        val currentServer = serverList[position]
+        if (currentServer.IsPremium)
+        {
+            holder.binding.premimumIMGV.visibility = View.VISIBLE
+        }
+        else {
+            holder.binding.premimumIMGV.visibility = View.GONE
+        }
     }
 
     override fun getItemCount(): Int = serverList.size
 
-    class ServerViewHolder( binding: ServerCountryRvItemBinding) : RecyclerView.ViewHolder(binding.root)
+    class ServerViewHolder( val binding: ServerCountryRvItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     fun updateData(newServerList: List<Server_DataModel>) {
         serverList = newServerList
