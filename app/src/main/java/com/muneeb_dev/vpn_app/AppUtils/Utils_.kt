@@ -29,6 +29,11 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+//////---------------- lambdas ------------------/////////////////////
+
+// Define a lambda with a parameter
+var onConnectClicked: ((Boolean) -> Unit)? = null
+
 //////---------------- Global Valuse ------------------/////////////////////
 //var isReceiverRegistered = false // Tracks if InnerReceiver is registered
 //var isPowerReceiverRegistered = false // Tracks if PowerButtonReceiver is registered

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.muneeb_dev.vpn_app.Fragments.BoltFrag.BoltFragment
+import com.muneeb_dev.vpn_app.Fragments.HistoryFrag.HistoryFragment
 import com.muneeb_dev.vpn_app.Fragments.HomeFrag.HomeFragment
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
@@ -15,7 +16,7 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> HomeFragment()
-            1 -> BoltFragment()
+            1 -> HistoryFragment()
             else -> throw IllegalStateException("Invalid position $position")
         }
     }

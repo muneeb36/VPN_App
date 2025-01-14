@@ -3,6 +3,7 @@ package com.muneeb_dev.vpn_app.Activities.MainAct
 import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -11,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.muneeb_dev.vpn_app.Activities.MainAct.PagerAdapter.ViewPagerAdapter
 import com.muneeb_dev.vpn_app.Activities.SpeedTestAct.SpeedTestActivity
+import com.muneeb_dev.vpn_app.AppUtils.onConnectClicked
 import com.muneeb_dev.vpn_app.AppUtils.updateStatusBarColor
 import com.muneeb_dev.vpn_app.R
 import com.muneeb_dev.vpn_app.databinding.ActivityMainBinding
@@ -47,7 +49,11 @@ class MainActivity : AppCompatActivity() {
                     binding.viewPager.setCurrentItem(0, true)
 
                 }
-                R.id.nav_bolt ->
+//                R.id.nav_bolt ->
+//                {
+//                    binding.viewPager.setCurrentItem(1, true)
+//                }
+                R.id.nav_history ->
                 {
                     binding.viewPager.setCurrentItem(1, true)
                 }
@@ -85,7 +91,31 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, SpeedTestActivity::class.java))
         }
 
+        binding.includedDrawer.closeIMGV.setOnClickListener {
+            binding.drawerLayout.closeDrawer(GravityCompat.START) // Close drawer
+        }
 
+
+        //////// lambdas reciving ////////
+        onConnectClicked = { isConnected ->
+            if (isConnected) {
+                binding.bottomNavIMGV.visibility = View.INVISIBLE
+                binding.bottomNavigationView.visibility = View.INVISIBLE
+            }
+            else{
+                binding.bottomNavIMGV.visibility = View.VISIBLE
+                binding.bottomNavigationView.visibility = View.VISIBLE
+            }
+        }
+
+
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        onConnectClicked = null
     }
 
 

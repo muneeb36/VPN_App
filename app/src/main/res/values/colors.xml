@@ -14,7 +14,11 @@
     <color name="main_text_color">#E7E7E7</color>
 
 
+    <color name="red_color">#FF0000</color>
+
     <color name="green2_color">#14AE5C</color>
+    <color name="green3_color">#2DC21A</color>
+
     <color name="blue_color">#06E1FF</color>
     <color name="blue_color2">#3D83FF</color>
 

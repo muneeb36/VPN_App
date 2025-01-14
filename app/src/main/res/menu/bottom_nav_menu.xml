@@ -10,8 +10,12 @@
         android:title=""
         android:enabled="false"
         />
+<!--    <item-->
+<!--        android:id="@+id/nav_bolt"-->
+<!--        android:title="Profile"-->
+<!--        android:icon="@drawable/unselected_bolt_icon" />-->
     <item
-        android:id="@+id/nav_bolt"
-        android:title="Profile"
-        android:icon="@drawable/unselected_bolt_icon" />
+        android:id="@+id/nav_history"
+        android:title="History"
+        android:icon="@drawable/history" />
 </menu>

@@ -4,6 +4,7 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Activities.MainAct.MainActivity">
 
@@ -98,14 +99,14 @@
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                app:layout_constraintBottom_toTopOf="@+id/imageView"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavIMGV"
                 app:layout_constraintEnd_toEndOf="parent"
 
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/mainToolBar" />
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/bottomNavIMGV"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
                 android:background="@drawable/bottom_nav_bg"

@@ -16,6 +16,19 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize" />
 
+    <ImageView
+        android:id="@+id/mapIMGV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:scaleType="fitXY"
+        android:src="@drawable/map_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -27,17 +40,192 @@
         >
 
         <ImageView
-            android:id="@+id/mapIMGV"
-            android:layout_width="match_parent"
+            android:id="@+id/flagIMGV"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:scaleType="fitXY"
-            android:src="@drawable/map_bg"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/flag_circular2"
+            android:layout_marginTop="@dimen/_20sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/countryNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/sora_medium"
+            android:text="Netherlands"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:textColor="@color/main_text_color"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/flagIMGV"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_grey"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:elevation="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countryNameTV"
+            >
+        <LinearLayout
+            android:id="@+id/selecteLocation_CL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingStart="@dimen/_5sdp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/duration"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:fontFamily="@font/sora_medium"
+                    android:text="Duration"
+                    android:textColor="@color/text2_color"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    />
+
+                <TextView
+                    android:id="@+id/durationTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sora_medium"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="00:00:54"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="@dimen/_13ssp" />
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/map_location"
+                    />
+
+                <TextView
+                    android:id="@+id/ipaddressTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:fontFamily="@font/sora_medium"
+                    android:text="IP address"
+                    android:textColor="@color/text2_color"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sora_medium"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="192.168.123.132"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="@dimen/_13ssp" />
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chart"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:fontFamily="@font/sora_medium"
+                    android:text="Strength"
+                    android:textColor="@color/text2_color"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sora_medium"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="High"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="@dimen/_13ssp" />
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

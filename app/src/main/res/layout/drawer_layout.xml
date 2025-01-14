@@ -23,7 +23,7 @@
             >
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/closeIMGV"
                 android:layout_width="@dimen/_24sdp"
                 android:layout_height="@dimen/_24sdp"
                 android:background="@drawable/dark_grey_rounded_rect_icon_bg"
@@ -37,7 +37,7 @@
                 android:src="@drawable/vpn_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                app:layout_constraintTop_toBottomOf="@+id/closeIMGV" />
 
 
 
